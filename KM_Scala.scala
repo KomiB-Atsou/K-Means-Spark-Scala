@@ -131,7 +131,7 @@ object KM_Scala {
     val sc = new SparkContext(conf)
 
     // Load the text into a Spark RDD, which is a distributed representation of each line of text
-    val textFile = sc.textFile("C:\\Users\\Marc\\IdeaProjects\\HelloScala\\src\\main\\resources\\iris.data.txt")
+    val textFile = sc.textFile("iris.data.txt")
 
     val data = textFile.map(line => line.split(","))
       // .map(x => x(4))
