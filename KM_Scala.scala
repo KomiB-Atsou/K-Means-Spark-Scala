@@ -32,8 +32,8 @@ object KM_Scala {
   }
 
   def permute(l : List[(Int, Int)]) : List[(Int, Int)] = {
-    val s = for (x <- l) yield (x._2, x._1)
-    return s
+    val result = for (x <- l) yield (x._2, x._1)
+    result
   }
 
   def simpleKMeans(sc : SparkContext, data : RDD[(Long, List[String])], nbClusters : Int) :
